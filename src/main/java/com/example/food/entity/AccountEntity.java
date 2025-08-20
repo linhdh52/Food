@@ -1,14 +1,14 @@
 package com.example.food.entity;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
+
 import java.util.Date;
 
 @Entity
 @Table(name = "account")
 public class AccountEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "device_seq")
-    @SequenceGenerator(name = "device_seq",sequenceName = "device_seq_name",allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "user_id")
     private Long id;
 
